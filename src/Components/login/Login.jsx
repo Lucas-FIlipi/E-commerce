@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
-import { IoEye, IoEyeOff } from "react-icons/io5"; // ícones para mostrar/ocultar
+import { IoEye, IoEyeOff } from "react-icons/io5"; 
 import "./login.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // state para mostrar a senha
+  const [showPassword, setShowPassword] = useState(false); 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -69,7 +69,7 @@ const Login = () => {
 
           <div style={{ position: "relative", marginBottom: "15px" }}>
             <input
-              type={showPassword ? "text" : "password"} // alterna entre mostrar/ocultar
+              type={showPassword ? "text" : "password"} 
               placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -84,7 +84,7 @@ const Login = () => {
             <FaLock
               style={{
                 position: "absolute",
-                right: "40px", // dá espaço pro botão de mostrar senha
+                right: "40px",
                 top: "50%",
                 transform: "translateY(-50%)",
                 color: "#888",
