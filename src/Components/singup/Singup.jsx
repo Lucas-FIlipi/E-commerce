@@ -1,9 +1,9 @@
 import React from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useState } from "react";
-import "./login.css";
+import "./singup.css";
 
-const Login = () => {
+const Singup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState();
 
@@ -17,12 +17,12 @@ const Login = () => {
     <div>
       <div className="container">
         <form onSubmit={handleSubmit}>
-          <h1>Acesse o sistema</h1>
+          <h1>Cadastro de usuario</h1>
           <div>
             <input
               type="email"
               placeholder="E-mail"
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.target.vale)}
             />
             <FaUser className="icon" />
           </div>
@@ -34,18 +34,8 @@ const Login = () => {
             />
             <FaLock className="icon" />
           </div>
-          <div className="recall-forget">
-            <label>
-              <input type="checkbox" />
-              Lembrar de mim
-            </label>
-            <a href="#">Esqueceu a senha?</a>
-          </div>
-          <button>Entrar</button>
-          <div className="singup-link">
-            <p>
-              Não tem uma conta? <a href="/Singup">Registrar</a>
-            </p>
+          <div>
+            <button>Entrar</button>
           </div>
         </form>
       </div>
@@ -53,4 +43,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Singup;

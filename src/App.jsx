@@ -1,12 +1,15 @@
-import "./App.css";
-import Login from "./Components/login/login";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "./Components/login/Login";
+import Singup from "./Components/singup/Singup";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/Singup" element={<Singup />} />
+    </Routes>
   );
-}
+};
 
 export default App;
